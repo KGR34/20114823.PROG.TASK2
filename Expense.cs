@@ -10,12 +10,13 @@ namespace _20114823.PROG.TASK2
         public string Description { get; set; }
         public double Amount { get; set; }
         
-        //I believe Income and Tax Deducted should be stored here but I could be wrong.
+        
 
         public Expense(string description, double amount)
         {
             Description = Description;
             Amount = amount;
+            
         }
 
 

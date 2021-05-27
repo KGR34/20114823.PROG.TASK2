@@ -66,7 +66,12 @@ namespace _20114823.PROG.TASK2
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSelection = new System.Windows.Forms.ComboBox();
+            this.cxbHomeLoan = new System.Windows.Forms.CheckBox();
+            this.cxbVehicleLoan = new System.Windows.Forms.CheckBox();
+            this.cxbRent = new System.Windows.Forms.CheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txbIncome
@@ -343,9 +348,9 @@ namespace _20114823.PROG.TASK2
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(296, 336);
+            this.groupBox1.Location = new System.Drawing.Point(688, 336);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(88, 71);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -362,30 +367,82 @@ namespace _20114823.PROG.TASK2
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(502, 362);
+            this.panel1.Location = new System.Drawing.Point(372, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(91, 55);
+            this.panel1.Size = new System.Drawing.Size(194, 218);
             this.panel1.TabIndex = 37;
             // 
-            // comboBox1
+            // cmbSelection
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSelection.FormattingEnabled = true;
+            this.cmbSelection.Items.AddRange(new object[] {
             "Rent",
             "Home Loan",
             "Vehicle Loan",
             "Home & Vehicle Loan"});
-            this.comboBox1.Location = new System.Drawing.Point(227, 122);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 38;
+            this.cmbSelection.Location = new System.Drawing.Point(233, 395);
+            this.cmbSelection.Name = "cmbSelection";
+            this.cmbSelection.Size = new System.Drawing.Size(121, 23);
+            this.cmbSelection.TabIndex = 38;
+            // 
+            // cxbHomeLoan
+            // 
+            this.cxbHomeLoan.AutoSize = true;
+            this.cxbHomeLoan.Location = new System.Drawing.Point(262, 168);
+            this.cxbHomeLoan.Name = "cxbHomeLoan";
+            this.cxbHomeLoan.Size = new System.Drawing.Size(88, 19);
+            this.cxbHomeLoan.TabIndex = 39;
+            this.cxbHomeLoan.Text = "Home Loan";
+            this.cxbHomeLoan.UseVisualStyleBackColor = true;
+            this.cxbHomeLoan.CheckedChanged += new System.EventHandler(this.cxbHomeLoan_CheckedChanged);
+            // 
+            // cxbVehicleLoan
+            // 
+            this.cxbVehicleLoan.AutoSize = true;
+            this.cxbVehicleLoan.Location = new System.Drawing.Point(262, 198);
+            this.cxbVehicleLoan.Name = "cxbVehicleLoan";
+            this.cxbVehicleLoan.Size = new System.Drawing.Size(92, 19);
+            this.cxbVehicleLoan.TabIndex = 40;
+            this.cxbVehicleLoan.Text = "Vehicle Loan";
+            this.cxbVehicleLoan.UseVisualStyleBackColor = true;
+            this.cxbVehicleLoan.CheckedChanged += new System.EventHandler(this.cxbVehicleLoan_CheckedChanged);
+            // 
+            // cxbRent
+            // 
+            this.cxbRent.AutoSize = true;
+            this.cxbRent.Location = new System.Drawing.Point(262, 223);
+            this.cxbRent.Name = "cxbRent";
+            this.cxbRent.Size = new System.Drawing.Size(50, 19);
+            this.cxbRent.TabIndex = 41;
+            this.cxbRent.Text = "Rent";
+            this.cxbRent.UseVisualStyleBackColor = true;
+            this.cxbRent.CheckedChanged += new System.EventHandler(this.cxbRent_CheckedChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(372, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(172, 57);
+            this.panel2.TabIndex = 42;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(576, 100);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(222, 218);
+            this.panel3.TabIndex = 43;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(810, 465);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.cxbRent);
+            this.Controls.Add(this.cxbVehicleLoan);
+            this.Controls.Add(this.cxbHomeLoan);
+            this.Controls.Add(this.cmbSelection);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.groupBox1);
@@ -468,7 +525,12 @@ namespace _20114823.PROG.TASK2
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSelection;
+        private System.Windows.Forms.CheckBox cxbHomeLoan;
+        private System.Windows.Forms.CheckBox cxbVehicleLoan;
+        private System.Windows.Forms.CheckBox cxbRent;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

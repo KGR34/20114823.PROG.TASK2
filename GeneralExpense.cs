@@ -11,9 +11,9 @@ namespace _20114823.PROG.TASK2
         public double CellPhone { get; set; }
         public double Travel { get; set; }
         public double Other { get; set; }
+        public double Tax { get; set; }
 
-
-        public GeneralExpense(double groceries, double waterLights, double cellPhone, double travel, double other, //child fields
+        public GeneralExpense(double groceries, double waterLights, double cellPhone, double travel, double other, double tax, //child fields
             string description, double amount // parent fields
             ) : base(description, amount)
         {
@@ -22,6 +22,7 @@ namespace _20114823.PROG.TASK2
             CellPhone = cellPhone;
             Travel = travel;
             Other = other;
+            Tax = tax;
         }
     }
 }
