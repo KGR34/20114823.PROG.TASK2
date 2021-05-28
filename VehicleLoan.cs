@@ -24,5 +24,11 @@ namespace _20114823.PROG.TASK2
             CarMonths = carMonths;
             Insurance = insurance;
         }
+
+        public override string Display()
+        {
+            return "Card Payment\t Order ID - " + base.Description + "\tAmount R: " + base.Amount;
+        }
+
     }
 }

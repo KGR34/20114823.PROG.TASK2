@@ -4,7 +4,7 @@ using System.Text;
 
 namespace _20114823.PROG.TASK2
 {
-    class Expense
+    public abstract class Expense
     {
         // Holds whats common in all payments
         public string Description { get; set; }
@@ -19,7 +19,7 @@ namespace _20114823.PROG.TASK2
             
         }
 
-
+        public abstract string Display();
 
 
     }

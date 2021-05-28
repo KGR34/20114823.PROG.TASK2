@@ -24,5 +24,11 @@ namespace _20114823.PROG.TASK2
             Other = other;
             Tax = tax;
         }
+
+        public override string Display()
+        {
+            return "Card Payment\t Order ID - " + base.Description + "\tAmount R: " + base.Amount;
+        }
+
     }
 }

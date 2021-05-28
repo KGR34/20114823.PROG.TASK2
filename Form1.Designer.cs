@@ -72,6 +72,7 @@ namespace _20114823.PROG.TASK2
             this.cxbRent = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnViewExpenses = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txbIncome
@@ -432,11 +433,22 @@ namespace _20114823.PROG.TASK2
             this.panel3.Size = new System.Drawing.Size(222, 218);
             this.panel3.TabIndex = 43;
             // 
+            // btnViewExpenses
+            // 
+            this.btnViewExpenses.Location = new System.Drawing.Point(372, 384);
+            this.btnViewExpenses.Name = "btnViewExpenses";
+            this.btnViewExpenses.Size = new System.Drawing.Size(86, 55);
+            this.btnViewExpenses.TabIndex = 44;
+            this.btnViewExpenses.Text = "View Expenses";
+            this.btnViewExpenses.UseVisualStyleBackColor = true;
+            this.btnViewExpenses.Click += new System.EventHandler(this.btnViewExpenses_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 465);
+            this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cxbRent);
@@ -531,6 +543,7 @@ namespace _20114823.PROG.TASK2
         private System.Windows.Forms.CheckBox cxbRent;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnViewExpenses;
     }
 }
 

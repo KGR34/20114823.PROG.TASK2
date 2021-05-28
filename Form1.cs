@@ -20,11 +20,12 @@ namespace _20114823.PROG.TASK2
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
+
             double income = Convert.ToInt32(txbIncome.Text);
             //Calculate calc = new Calculate(income);
 
 
-            string description = "t";
+            string description = txbMakeModel.Text;
             double tax = Convert.ToInt32(txbTax.Text);
             double amount = 0;
             double groceries = Convert.ToInt32(txbGroceries.Text);
@@ -66,6 +67,15 @@ namespace _20114823.PROG.TASK2
 
                 amount = P*(1 + I * N)/homeMonths;
 
+
+                if (amount > income/3)
+                {
+                    MessageBox.Show("Your Loan Repayment is Greater than 1 third of \n your Gross Income! \n Loan Approval is Unlikely!");
+                }
+
+
+
+
                 MessageBox.Show("home \n " + amount);
 
                 HomeLoan aHomeLoan = new HomeLoan(homePrice, homeDeposit, homeInterest, homeMonths, description, amount);
@@ -102,9 +112,10 @@ namespace _20114823.PROG.TASK2
             //double final = ("");
             MessageBox.Show(sum.ToString());
             MessageBox.Show(sum.ToString());
+
+            double final = income - sum;
             
-            
-            //MessageBox.Show("this may work \n " + genEx.Groceries + "\n" + itsRent.Rent);
+            MessageBox.Show("income less expenses = \n " + final);
 
         }
 
@@ -153,6 +164,12 @@ namespace _20114823.PROG.TASK2
                 panel3.Visible = true;
 
             }
+        }
+
+        private void btnViewExpenses_Click(object sender, EventArgs e)
+        {
+            frmViewExpenses frmView = new frmViewExpenses();
+            frmView.Show();
         }
     }
 }
