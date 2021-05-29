@@ -63,16 +63,15 @@ namespace _20114823.PROG.TASK2
             this.label16 = new System.Windows.Forms.Label();
             this.txbCarInsurance = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cmbSelection = new System.Windows.Forms.ComboBox();
             this.cxbHomeLoan = new System.Windows.Forms.CheckBox();
             this.cxbVehicleLoan = new System.Windows.Forms.CheckBox();
             this.cxbRent = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnViewExpenses = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txbIncome
@@ -347,15 +346,6 @@ namespace _20114823.PROG.TASK2
             this.label17.TabIndex = 34;
             this.label17.Text = "Insurance";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(688, 336);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(88, 71);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(140, 394);
@@ -372,19 +362,6 @@ namespace _20114823.PROG.TASK2
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 218);
             this.panel1.TabIndex = 37;
-            // 
-            // cmbSelection
-            // 
-            this.cmbSelection.FormattingEnabled = true;
-            this.cmbSelection.Items.AddRange(new object[] {
-            "Rent",
-            "Home Loan",
-            "Vehicle Loan",
-            "Home & Vehicle Loan"});
-            this.cmbSelection.Location = new System.Drawing.Point(233, 395);
-            this.cmbSelection.Name = "cmbSelection";
-            this.cmbSelection.Size = new System.Drawing.Size(121, 23);
-            this.cmbSelection.TabIndex = 38;
             // 
             // cxbHomeLoan
             // 
@@ -443,21 +420,29 @@ namespace _20114823.PROG.TASK2
             this.btnViewExpenses.UseVisualStyleBackColor = true;
             this.btnViewExpenses.Click += new System.EventHandler(this.btnViewExpenses_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(829, 100);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(313, 214);
+            this.listBox1.TabIndex = 45;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 465);
+            this.ClientSize = new System.Drawing.Size(1175, 458);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.cxbRent);
             this.Controls.Add(this.cxbVehicleLoan);
             this.Controls.Add(this.cxbHomeLoan);
-            this.Controls.Add(this.cmbSelection);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txbCarInsurance);
             this.Controls.Add(this.label16);
@@ -534,16 +519,15 @@ namespace _20114823.PROG.TASK2
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txbCarInsurance;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox cmbSelection;
         private System.Windows.Forms.CheckBox cxbHomeLoan;
         private System.Windows.Forms.CheckBox cxbVehicleLoan;
         private System.Windows.Forms.CheckBox cxbRent;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnViewExpenses;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

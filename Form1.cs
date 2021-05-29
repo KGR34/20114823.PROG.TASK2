@@ -25,7 +25,7 @@ namespace _20114823.PROG.TASK2
             //Calculate calc = new Calculate(income);
 
 
-            string description = txbMakeModel.Text;
+            string description = "General Expenses";
             double tax = Convert.ToInt32(txbTax.Text);
             double amount = 0;
             double groceries = Convert.ToInt32(txbGroceries.Text);
@@ -48,6 +48,7 @@ namespace _20114823.PROG.TASK2
                 double rent = Convert.ToInt32(txbRent.Text);
 
                 amount = rent;
+                description = "Rent";
                 Rental itsRent = new Rental(rent, description, amount);
 
                 Calculate.expenses.Add(itsRent);
@@ -56,6 +57,7 @@ namespace _20114823.PROG.TASK2
             }
             if (cxbHomeLoan.Checked)
             {
+                description = "Home Repayment"; 
                 double homePrice = Convert.ToInt32(txbHomePrice.Text);
                 double homeDeposit = Convert.ToInt32(txbHomeDeposit.Text);
                 double homeInterest = Convert.ToInt32(txbHomeInterest.Text);
@@ -84,6 +86,7 @@ namespace _20114823.PROG.TASK2
             }
             if (cxbVehicleLoan.Checked)
             {
+                description = txbMakeModel.Text;
                 double carPrice = Convert.ToInt32(txbCarPrice.Text);
                 double carDeposit = Convert.ToInt32(txbCarDeposit.Text);
                 double carInterest = Convert.ToInt32(txbCarInterest.Text);
@@ -110,8 +113,7 @@ namespace _20114823.PROG.TASK2
 
             double sum = Calculate.expenses.Sum(x => x.Amount);
             //double final = ("");
-            MessageBox.Show(sum.ToString());
-            MessageBox.Show(sum.ToString());
+            MessageBox.Show("Total Expenses :" + sum.ToString());
 
             double final = income - sum;
             
@@ -130,7 +132,7 @@ namespace _20114823.PROG.TASK2
             if (cxbHomeLoan.Checked)
             {
                 panel1.Visible = false;
-
+                panel2.Visible = true;
             }
             else 
             {
@@ -143,6 +145,7 @@ namespace _20114823.PROG.TASK2
             if (cxbRent.Checked)
             {
                 panel2.Visible = false;
+                panel1.Visible = true;
 
             }
             else
@@ -168,8 +171,17 @@ namespace _20114823.PROG.TASK2
 
         private void btnViewExpenses_Click(object sender, EventArgs e)
         {
-            frmViewExpenses frmView = new frmViewExpenses();
-            frmView.Show();
+            //frmViewExpenses frmView = new frmViewExpenses();
+            //frmView.Show();
+
+            List<Expense> expense = Calculate.expenses.OrderByDescending(x => x.Amount).ToList();
+
+            foreach (Expense exp in expense)
+            {
+                listBox1.Items.Add(exp.Display());
+            }
+
+
         }
     }
 }
