@@ -6,7 +6,7 @@ namespace _20114823.PROG.TASK2
 {
     public abstract class Expense
     {
-        // Holds whats common in all payments
+        // Holds whats common in all Expenses
         public string Description { get; set; }
         public double Amount { get; set; }
         
@@ -14,7 +14,7 @@ namespace _20114823.PROG.TASK2
 
         public Expense(string description, double amount)
         {
-            Description = Description;
+            Description = description;
             Amount = amount;
             
         }

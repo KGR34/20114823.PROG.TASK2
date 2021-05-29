@@ -5,7 +5,8 @@ using System.Text;
 namespace _20114823.PROG.TASK2
 {
     class GeneralExpense : Expense
-    {
+    {   
+        //Holds what is unique to General Expenses
         public double Groceries { get; set; }
         public double WaterLights { get; set; }
         public double CellPhone { get; set; }
@@ -27,7 +28,7 @@ namespace _20114823.PROG.TASK2
 
         public override string Display()
         {
-            return "Description - " + base.Description + "\tAmount R: " + base.Amount;
+            return base.Description + "\tAmount R: " + base.Amount;
         }
 
     }

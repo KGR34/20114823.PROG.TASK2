@@ -5,7 +5,8 @@ using System.Text;
 namespace _20114823.PROG.TASK2
 {
     class Rental : Expense
-    {
+    {   
+        //Holds what is unique to Rental
         public double Rent { get; set; }
 
 
@@ -18,7 +19,7 @@ namespace _20114823.PROG.TASK2
 
         public override string Display()
         {
-            return "Description - " + base.Description + "\tAmount R: " + base.Amount;
+            return base.Description + ".        \tAmount R: " + base.Amount;
         }
 
     }

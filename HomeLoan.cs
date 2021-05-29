@@ -6,6 +6,7 @@ namespace _20114823.PROG.TASK2
 {
     class HomeLoan : Expense
     {
+        //Holds whats unique to Home Loans
         public double HomePrice { get; set; }
         public double HomeDeposit { get; set; }
         public double HomeInterest { get; set; }
@@ -24,7 +25,7 @@ namespace _20114823.PROG.TASK2
 
         public override string Display()
         {
-            return "Order ID - " + base.Description + "\tAmount R: " + base.Amount;
+            return base.Description + "\tAmount R: " + base.Amount;
         }
 
 
