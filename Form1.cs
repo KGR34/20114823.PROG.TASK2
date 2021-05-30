@@ -12,9 +12,18 @@ namespace _20114823.PROG.TASK2
 {
     public partial class Form1 : Form
     {
+        public double Sum { get; }
+        public double Income { get; }
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        public Form1(double sum, double income)
+        {
+            Sum = sum;
+            Income = income;
         }
 
 
@@ -136,6 +145,14 @@ namespace _20114823.PROG.TASK2
             
             //Outputs income less expenses in  a message box
             MessageBox.Show("Income less expenses :" + "R" + final);
+
+
+            Form1 alertDetails = new Form1(sum, income);
+            
+            Alert alertProcessor = new Alert();
+
+            alertProcessor.alertUser(alertDetails);
+
 
                 if (sum > income*3/4)
                 {

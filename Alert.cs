@@ -15,14 +15,34 @@ namespace _20114823.PROG.TASK2
 
         protected virtual void OnAlert(Expense e)
         {
-            
-
-
+            if(alert != null)
+            {
+                alert(e);
+            }
         }
 
+        public void alertUser(Expense e)
+        {
+            alert += tooHigh;
+            tooHigh(e);
+            OnAlert(e);
+        }
+
+        private void tooHigh(Expense e)
+        {
+
+            //Calculates total expenses
+            double sum = Calculate.expenses.Sum(x => x.Amount);
+
+            //Calculates income less expenses
+            double final = income - sum;
 
 
-
+            if (sum > income * 3 / 4)
+            {
+                MessageBox.Show("Your total expenses exceed 75% of your income!");
+            }
+        }
 
 
 

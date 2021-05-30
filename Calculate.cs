@@ -10,7 +10,7 @@ namespace _20114823.PROG.TASK2
         public static List<Expense> expenses = new List<Expense>();
 
         public static double income;
-        
-        
+
+        public static List<Form1> alert = new List<Form1>();
     }
 }
