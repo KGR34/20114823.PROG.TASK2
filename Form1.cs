@@ -81,7 +81,10 @@ namespace _20114823.PROG.TASK2
                 if (amount > income/3)
                 {
                     //outputs message if the home loan repayment is greater than a thrid of the users gross income
-                    MessageBox.Show("Your Loan Repayment is Greater than 1 third of your Gross Income! \n Loan Approval is Unlikely!");
+                    //Creates the message and the title for the messagbox
+                    string message = "Your Loan Repayment is Greater than 1 third of your Gross Income! \n Loan Approval is Unlikely!";
+                    string title = "ALERT!";
+                    MessageBox.Show(message, title);
                 }
 
                 //outputs montly home loan repayments in a message box
@@ -138,8 +141,11 @@ namespace _20114823.PROG.TASK2
             MessageBox.Show("Income less expenses :" + "R" + final);
 
                 if (sum > income*3/4)
-                {
-                    MessageBox.Show("Your total expenses exceed 75% of your income!");
+                {   
+                    //Creates the message and the title for the messagbox
+                    string message = "Your total expenses exceed 75% of your income!";
+                    string title = "ALERT!";
+                    MessageBox.Show(message, title);
                 }
 
 
@@ -148,7 +154,10 @@ namespace _20114823.PROG.TASK2
             //CATCH TO WARN USER OF INCORRECT INPUT
             catch (Exception )
             {
-                Console.WriteLine("\nYOU DID NOT ENTER A NUMBER PLEASE START AGAIN AND ENTER A VALID NUMBER.");
+                //Creates the message and the title for the messagbox
+                string message = "YOU DID NOT ENTER A NUMBER PLEASE START AGAIN AND ENTER A VALID NUMBER.";
+                string title = "ALERT!";
+                MessageBox.Show(message, title);
             }
 
         }

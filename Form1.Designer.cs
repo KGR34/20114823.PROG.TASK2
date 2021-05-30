@@ -72,6 +72,8 @@ namespace _20114823.PROG.TASK2
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnViewExpenses = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbIncome
@@ -429,11 +431,30 @@ namespace _20114823.PROG.TASK2
             this.listBox1.Size = new System.Drawing.Size(313, 214);
             this.listBox1.TabIndex = 45;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(51, 130);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(164, 15);
+            this.label18.TabIndex = 46;
+            this.label18.Text = "Input General Expenses Below";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(262, 121);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 15);
+            this.label19.TabIndex = 47;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 458);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.panel3);
@@ -528,6 +549,8 @@ namespace _20114823.PROG.TASK2
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnViewExpenses;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
 
