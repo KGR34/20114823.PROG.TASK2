@@ -172,7 +172,10 @@ namespace _20114823.PROG.TASK2
             //CATCH TO WARN USER OF INCORRECT INPUT
             catch (Exception )
             {
-                Console.WriteLine("\nYOU DID NOT ENTER A NUMBER PLEASE START AGAIN AND ENTER A VALID NUMBER.");
+                //Creates the message and the title for the messagbox
+                string message = "YOU DID NOT ENTER A NUMBER PLEASE START AGAIN AND ENTER A VALID NUMBER.";
+                string title = "ALERT!";
+                MessageBox.Show(message, title);
             }
 
         }
