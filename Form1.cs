@@ -157,7 +157,10 @@ namespace _20114823.PROG.TASK2
                 //if statement to check if total expenses exceed 75% of income
                 if (sum > income*3/4)
                 {
-                    MessageBox.Show("Your total expenses exceed 75% of your income!");
+                    //Creates the message and the title for the messagbox
+                    string message = "Your total expenses exceed 75% of your income!";
+                    string title = "ALERT!";
+                    MessageBox.Show(message, title);
                 }
 
 
