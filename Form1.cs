@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace _20114823.PROG.TASK2
 {
     public partial class Form1 : Form
-    {
+    {   //creates fields for delegate to use
         public double Sum { get; }
         public double Income { get; }
 
@@ -146,14 +146,15 @@ namespace _20114823.PROG.TASK2
             //Outputs income less expenses in  a message box
             MessageBox.Show("Income less expenses :" + "R" + final);
 
-
+            //creates object 
             Form1 alertDetails = new Form1(sum, income);
             
+            //instance of the alert(delegate) service
             Alert alertProcessor = new Alert();
 
             alertProcessor.alertUser(alertDetails);
 
-
+                //if statement to check if total expenses exceed 75% of income
                 if (sum > income*3/4)
                 {
                     MessageBox.Show("Your total expenses exceed 75% of your income!");
