@@ -7,22 +7,26 @@ namespace _20114823.PROG.TASK2
 {
     class Alert
     {
-
+        //Delegate for alerting the user
         public delegate void alertDelegate(Expense e);
 
+        //Event to trigger the delegate and its methods
         public event alertDelegate alert;
 
-
+        //performs the delegate/event call
         protected virtual void OnAlert(Expense e)
-        {
+        {   
+            //checks if methods are assigned
             if(alert != null)
             {
                 alert(e);
             }
         }
-
+        
+        //assigns methods to delegate
         public void alertUser(Expense e)
-        {
+        {   
+            //calls delegate/runs event
             alert += tooHigh;
             tooHigh(e);
             OnAlert(e);
