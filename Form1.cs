@@ -21,7 +21,7 @@ namespace _20114823.PROG.TASK2
         //Runs the following code when the "SUBMIT" button is clicked
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            //try catch for error handling
             try { 
 
             //Inputs for General Expenses
@@ -48,7 +48,8 @@ namespace _20114823.PROG.TASK2
 
             //Checking whats selected, and creating an object depending on that
             if (cxbRent.Checked) 
-            {
+            {   
+                //variable and input for rent value
                 double rent = Convert.ToInt32(txbRent.Text);
 
                 amount = rent;
@@ -57,11 +58,11 @@ namespace _20114823.PROG.TASK2
 
                 //stores object in Calculate class list
                 Calculate.expenses.Add(itsRent);
-
-                
+               
             }
             if (cxbHomeLoan.Checked)
-            {
+            {   
+                //variables and inputs for home loan values
                 string type = description;
                 string type2 = description;
                 description = "Home Repayment"; 
@@ -95,9 +96,11 @@ namespace _20114823.PROG.TASK2
                 
                 //stores object in Calculate class list
                 Calculate.expenses.Add(aHomeLoan);
+
             }
             if (cxbVehicleLoan.Checked)
-            {
+            {   
+                //variables and inputs for vehicle loan values
                 String carName = "Vehicle Loan : " + txbMakeModel.Text;
                 double carPrice = Convert.ToInt32(txbCarPrice.Text);
                 double carDeposit = Convert.ToInt32(txbCarDeposit.Text);
@@ -124,7 +127,6 @@ namespace _20114823.PROG.TASK2
 
                 //stores object in Calculate class list
                 Calculate.expenses.Add(aVehicleLoan);
-
                 
             }
 
@@ -160,12 +162,6 @@ namespace _20114823.PROG.TASK2
                 MessageBox.Show(message, title);
             }
 
-        }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void cxbHomeLoan_CheckedChanged(object sender, EventArgs e)
@@ -224,6 +220,10 @@ namespace _20114823.PROG.TASK2
                 listBox1.Items.Add(exp.Display());
             }
 
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
