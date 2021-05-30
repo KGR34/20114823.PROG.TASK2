@@ -90,7 +90,10 @@ namespace _20114823.PROG.TASK2
                 if (amount > income/3)
                 {
                     //outputs message if the home loan repayment is greater than a thrid of the users gross income
-                    MessageBox.Show("Your Loan Repayment is Greater than 1 third of your Gross Income! \n Loan Approval is Unlikely!");
+                    //Creates the message and the title for the messagbox
+                    string message = "Your Loan Repayment is Greater than 1 third of your Gross Income! \n Loan Approval is Unlikely!";
+                    string title = "ALERT!";
+                    MessageBox.Show(message, title);
                 }
 
                 //outputs montly home loan repayments in a message box
