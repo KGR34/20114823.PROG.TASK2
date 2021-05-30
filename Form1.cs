@@ -242,7 +242,8 @@ namespace _20114823.PROG.TASK2
                 listBox1.Items.Add(exp.Display());
             }
 
-
+            //reveals the listbox
+            panel4.Visible = false;
         }
     }
 }

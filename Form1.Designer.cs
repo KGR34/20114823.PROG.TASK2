@@ -72,6 +72,7 @@ namespace _20114823.PROG.TASK2
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnViewExpenses = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txbIncome
@@ -429,11 +430,19 @@ namespace _20114823.PROG.TASK2
             this.listBox1.Size = new System.Drawing.Size(313, 214);
             this.listBox1.TabIndex = 45;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(804, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(359, 218);
+            this.panel4.TabIndex = 46;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 458);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnViewExpenses);
             this.Controls.Add(this.panel3);
@@ -528,6 +537,7 @@ namespace _20114823.PROG.TASK2
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnViewExpenses;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
